@@ -8,6 +8,9 @@ jobs:
   build-gradle-project:
     runs-on: ubuntu-latest
     name: Build
+    permissions:
+      packages: write
+      pull-requests: write
 
     steps:
       - name: Checkout project sources
@@ -15,6 +18,9 @@ jobs:
 
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
 
       - name: Run build with Gradle Wrapper
         run: ./gradlew build
