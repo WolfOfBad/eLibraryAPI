@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="robots" content="noarchive, noindex, nofollow">
+    <title>Тест Тьюринга</title>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="/style_sm.css" type="text/css" media="screen">
+</head>
+
+<body bgcolor=#f5f5f5>
+<div class="midtext" style="position:absolute; width:400px; text-align:center; top:30%; left:50%; margin-top:-120px; margin-left:-250px;">
+
+    <img src="/images/robot2.png" border=0 width=100 vspace=8><br>
+    С Вашего IP-адреса пуступает необычно много запросов на сайт elibrary.ru. Пожалуйста, подтвердите, что Вы являетесь реальным пользователем, а не роботом.
+    <br><br>
+    <form action="/check_captcha.asp" method="POST">
+        <div class="g-recaptcha" data-sitekey="6Lc_wu8UAAAAAJnwHXzpTkFc2yDHTMMt0O9v4hU1" style="margin-left:50px;"></div>
+        <br/>
+        <input type="hidden" name="rpage" value=https://www.elibrary.ru/item.asp?id=29812023>
+        <input type="submit" value="Продолжить">
+    </form>
+
+</div>
+</body>
+</html>

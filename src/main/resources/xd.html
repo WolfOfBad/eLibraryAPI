@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="robots" content="noarchive, nofollow">
+
+    <meta name="description"
+          content='Рассматривается однородное квазидифференциальное уравнение произвольного порядка достаточно общего вида и такое, что его фундаментальная система решений выражается в квадратурах. Эти интегралы представлены в настоящей работе в виде сумм рядов. Одним из применений полученных представлений может быть приближенное построение решений исходного уравнения (например, когда квадратуры не выражаются в элементарных...'>
+    <title>О представлении квадратур одного квазидифференциального уравнения в виде сумм рядов</title>
+    <meta property="og:image" content="https://elibrary.ru/images/elibrary_fb.png" />
+    <meta property="og:title"
+          content='О представлении квадратур одного квазидифференциального уравнения в виде сумм рядов' />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://elibrary.ru/asqewr" />
+    <meta property="og:site_name" content="eLIBRARY.RU" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+
+
+
+    <script type="text/javascript" src="/jquery.min.js"></script>
+    <script type="text/javascript" src="/jquery.tools.min.js"></script>
+    <script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <script type="text/javascript" src="/fancybox/jquery.easydrag.js"></script>
+    <script type="text/javascript" src="/elibrary.js"></script>
+    <script type="text/javascript" src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/style_sm.css" type="text/css" media="screen">
+
+    <SCRIPT LANGUAGE="JavaScript">
+        but_blue_hover=new Image();
+        but_blue_hover.src="/images/but_blue_hover.png";
+        but_red_hover=new Image();
+        but_red_hover.src="/images/but_red_hover.png";
+        but_gray_hover=new Image();
+        but_gray_hover.src="/images/but_gray_hover.png";
+        ref_down=new Image();
+        ref_down.src="/images/but_orange_down.gif";
+        ref_up=new Image();
+        ref_up.src="/images/but_orange_up.gif";
+        comment_exist=new Image();
+        comment_exist.src="/images/comments-r.png";
+        comment_absent=new Image();
+        comment_absent.src="/images/comments-g.png";
+
+        function load_article(iid){
+
+            alerts("Для доступа к полному тексту необходимо вначале войти в библиотеку!");
+            document.getElementById("win_login").className = "expanded";
+            document.getElementById("img_login").src = w_up.src;
+            document.forms["login"].login.focus();
+
+        }
+        function show_contents(){
+
+            alerts("Для просмотра оглавления книги необходимо вначале войти в библиотеку!");
+            document.getElementById("win_login").className = "expanded";
+            document.getElementById("img_login").src = w_up.src;
+            document.forms["login"].login.focus();
+
+        }
+        function show_freepart(){
+
+            alerts("Для просмотра фрагмента книги необходимо вначале войти в библиотеку!");
+            document.getElementById("win_login").className = "expanded";
+            document.getElementById("img_login").src = w_up.src;
+            document.forms["login"].login.focus();
+
+        }
+        function file_article(fid, filenum){
+
+            alerts("Для просмотра файла необходимо вначале войти в библиотеку!");
+            document.getElementById("win_login").className = "expanded";
+            document.getElementById("img_login").src = w_up.src;
+            document.forms["login"].login.focus();
+
+        }
+        function url_article(idid, urlnum){
+
+            alerts("Для просмотра документа необходимо вначале войти в библиотеку!");
+            document.getElementById("win_login").className = "expanded";
+            document.getElementById("img_login").src = w_up.src;
+            document.forms["login"].login.focus();
+
+        }
+        function email_article(){
+
+            alerts("Для доступа к полному тексту необходимо вначале войти в библиотеку!");
+            document.getElementById("win_login").className = "expanded";
+            document.getElementById("img_login").src = w_up.src;
+            document.forms["login"].login.focus();
+
+        }
+        function show_itemrefs(){
+            alerts("Для просмотра списка цитируемой литературы необходимо вначале войти в библиотеку!");
+            document.getElementById("win_login").className = "expanded";
+            document.getElementById("img_login").src = w_up.src;
+            document.forms["login"].login.focus()
+        }
+        function edit_notes(){
+
+            alerts("Для того, чтобы добавить персональную заметку к публикации, необходимо вначале войти в библиотеку!");
+            document.getElementById("win_login").className = "expanded";
+            document.getElementById("img_login").src = w_up.src;
+            document.forms["login"].login.focus();
+
+        }
+
+        function add_link(link){
+
+            alerts("Для того, чтобы добавить ссылку на полный текст публикации, необходимо вначале войти в библиотеку!");
+            document.getElementById("win_login").className = "expanded";
+            document.getElementById("img_login").src = w_up.src;
+            document.forms["login"].login.focus();
+
+        }
+        function reply_comments(commentid){
+
+            alerts("Для того, чтобы участвовать в обсуждении публикаций, необходимо зарегистрироваться в системе Science Index в качестве автора научных публикаций!");
+            document.getElementById("win_login").className = "expanded";
+            document.getElementById("img_login").src = w_up.src;
+            document.forms["login"].login.focus();
+
+        }
+        function edit_comments(commentid){
+
+            alerts("Для того, чтобы участвовать в обсуждении публикаций, необходимо зарегистрироваться в системе Science Index в качестве автора научных публикаций!");
+            document.getElementById("win_login").className = "expanded";
+            document.getElementById("img_login").src = w_up.src;
+            document.forms["login"].login.focus();
+
+        }
+        function new_comments(){
+
+            alerts("Для того, чтобы участвовать в обсуждении публикаций, необходимо зарегистрироваться в системе Science Index в качестве автора научных публикаций!");
+            document.getElementById("win_login").className = "expanded";
+            document.getElementById("img_login").src = w_up.src;
+            document.forms["login"].login.focus();
+
+        }
+
+        function translate_abstract(){
+            $.fancybox({
+                href : '/translate_abstract.asp?id=47466893&rand=' + Math.random(),
+                title : '',
+                padding : 20,
+                width : 640,
+                height : 350,
+                overlayOpacity : 0.3,
+                overlayColor : '#000',
+                speedIn : 500,
+                hideOnOverlayClick : false,
+                enableEscapeButton : true,
+                type : 'iframe'
+            });
+        }
+
+        function welcome(par){
+            document.forms["results"].counterid.value=par;
+            document.forms["results"].target="_blank";
+            document.forms["results"].action="counter.asp";
+            document.forms["results"].submit();
+        }
+        function newquery(){
+            document.forms["results"].action="querybox.asp";
+            document.forms["results"].target="";
+            document.forms["results"].submit()
+        }
+        function order_item_add(){
+            anewwin=window.open("", "addwin", "resizable=yes,scrollbars=yes,height=300,width=500,top=0,left=0");
+            document.forms["results"].action="order_item_add.asp";
+            document.forms["results"].target="addwin";
+            document.forms["results"].submit()
+        }
+        function show_help(topic){
+            anewwin=window.open("", "addwin", "resizable=yes,scrollbars=yes,height=300,width=500,top=0,left=0");
+            document.forms["results"].action=topic;
+            document.forms["results"].target="addwin";
+            document.forms["results"].submit()
+        }
+        function RowSelect(row,sel){
+            var rbgc = sel==1 ? "#e8e8e8" : "#f5f5f5";
+            $('#'+row+' td').attr('bgColor', rbgc);
+        }
+
+        function isVisible(tag) {
+            var t = $(tag);
+            var w = $(window);
+            var wt = w.scrollTop();
+            var tt = t.offset().top;
+            var tb = tt + t.height();
+            return ((tb <= wt + w.height()) && (tt >= wt));
+        }
+        function pdf_icon(b) {
+            if (!b.prop("shown") && isVisible(b)) {
+                b.prop("shown", true);
+                b.load("ispdf.asp?itemid=" + b.attr('name').substring(4) + "&rand=" + Math.random());
+            }
+        }
+        function get_pdfs(){
+            $('div[id^="pdf_"]:not(prop("shown"))').each(function(){
+                pdf_icon($(this))
+            });
+        }
+        setInterval(function() {
+            if ( didScroll2 ) {
+                didScroll2=false;
+                get_pdfs();
+            }
+        }, 200);
+
+        $(document).ready(function() {
+            didScroll=true;
+        })
+
+        function select_all(){
+            $('input:checkbox[name^="tid"]').attr('checked', true);
+            $('input:checkbox[name^="pid"]').attr('checked', true);
+            $('tr[id^="arw"] td').attr('bgColor', "#e8e8e8");
+            $('tr[id^="brw"] td').attr('bgColor', "#e8e8e8");
+        }
+        function deselect_all(){
+            $('input:checkbox[name^="tid"]').attr('checked', false);
+            $('input:checkbox[name^="pid"]').attr('checked', false);
+            $('tr[id^="arw"] td').attr('bgColor', "#f5f5f5");
+            $('tr[id^="brw"] td').attr('bgColor', "#f5f5f5");
+        }
+
+        function itembox_add(){
+            var frm = document.forms["results"];
+            $.fancybox({
+                href : 'itembox_item_add1.asp?itemboxid='+frm.itemboxid.value+'&id='+frm.id.value ,
+                title : '',
+                padding : 20,
+                width : 480,
+                height : 150,
+                overlayOpacity : 0.3,
+                overlayColor : '#000',
+                speedIn : 500,
+                hideOnOverlayClick : false,
+                enableEscapeButton : true,
+                type : 'iframe'
+            });
+        }
+        function itembox_adds(){
+            var frm = document.forms["results"];
+            var issel=0;
+            frm.items_all.value="";
+            for (var i = 0; i < frm.elements.length; i++) {
+                if (frm.elements[i].name.substring(0,3)=="tid"){
+                    if (frm.elements[i].checked) {
+                        issel=issel+1;
+                        frm.items_all.value = frm.items_all.value + frm.elements[i].name.substring(3, frm.elements[i].name.length) + "|";
+                    }
+                }
+            }
+            if (issel==0) {
+                alerts ("Не выделено ни одной публикации")}
+            else {
+                $.fancybox({
+                    href : 'itembox_item_add2.asp?itemboxid='+frm.itemboxid.value+'&items_all='+frm.items_all.value ,
+                    title : '',
+                    padding : 20,
+                    width : 480,
+                    height : 150,
+                    overlayOpacity : 0.3,
+                    overlayColor : '#000',
+                    speedIn : 500,
+                    hideOnOverlayClick : false,
+                    enableEscapeButton : true,
+                    type : 'iframe'
+                });
+            }
+        }
+        function for_reference(){
+            $.fancybox({
+                href : 'for_reference.asp?id=47466893&rand=' + Math.random(),
+                title : '',
+                padding : 20,
+                width : 480,
+                height : 250,
+                overlayOpacity : 0.3,
+                overlayColor : '#000',
+                speedIn : 500,
+                hideOnOverlayClick : false,
+                enableEscapeButton : true,
+                type : 'iframe'
+            });
+        }
+        function qr_code(dd){
+            $.fancybox({
+                href : '/qr_code_edn.asp?edn='+dd+'&rand=' + Math.random(),
+                title : '',
+                padding : 20,
+                width : 250,
+                height : 300,
+                overlayOpacity : 0.3,
+                overlayColor : '#000',
+                speedIn : 500,
+                hideOnOverlayClick : false,
+                enableEscapeButton : true,
+                type : 'iframe'
+            });
+        }
+
+    </SCRIPT>
+</head>
+
+<body>
+<table width=100% cellpadding=0 cellspacing=0 border=0>
+    <tr>
+        <td width=100% align=center valign=top>
+
+            <table cellpadding=0 cellspacing=0 border=0>
+                <tr>
+                    <td width=170 align=left valign=top id="leftcol">
+
+                        <table border=0 cellspacing=0 cellpadding=0 width=150>
+
+                            <tr>
+                                <td><a
+                                        href="/defaultx.asp"><img src="/images/welcome1.jpg" width=150 title="НАУЧНАЯ ЭЛЕКТРОННАЯ БИБЛИОТЕКА eLIBRARY.RU" border=0 vspace=15></a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><a
+                                        href="/defaultx.asp"><img id="elibrary_logo" src="/images/elibrary_logo2.svg" width=150 height=39 border=0 vspace=10 title="eLIBRARY.RU - НАУЧНАЯ ЭЛЕКТРОННАЯ БИБЛИОТЕКА"></a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div style="height:10px;"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width=150 align=center valign=top>
+
+                                    <img src="/itemfiles/0/4/7/4/6/6/8/5/2//42f5b773-6f81-4b44-82ef-0567bc1194ce.jpg" border=0 width=120 style="behavior: url(/pie/PIE.htc); box-shadow: 1px 2px 3px #888;">
+
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div style="height:20px;"></div>
+                                </td>
+                            </tr>
+                            <script language="JavaScript">
+                                if (supportsSVG) {
+                                    document.getElementById("elibrary_logo").src="/images/elibrary_logo2.svg";}
+                                else {
+                                    document.getElementById("elibrary_logo").src="/images/elibrary_logo.gif";}
+                            </script>
+                            <SCRIPT LANGUAGE="JavaScript">
+                                function check_all(){
+                                    if (document.forms["login"].login.value==""){
+                                        alert("Не указано имя пользователя!");
+                                        return false;
+                                    }
+                                    else if (document.forms["login"].password.value==""){
+                                        alert("Не указан пароль!");
+                                        return false;
+                                    }
+                                    else{
+                                        var frm = document.forms["login"];
+                                        frm.action="/start_session.asp";
+                                        frm.target="";
+                                        frm.submit();
+                                    }
+                                }
+                                function login_enter(event){
+                                    var keycode;
+                                    event = event || window.event;
+                                    keycode = event.keyCode || event.which;
+                                    if(keycode==13){
+                                        check_all();
+                                        return false;
+                                    }
+                                }
+                                function sso_orgs(){
+                                    var frm = document.forms["results"];
+                                    $.fancybox({
+                                        href : 'sso_orgs.asp' ,
+                                        title : '',
+                                        padding : 20,
+                                        width : 480,
+                                        height : 200,
+                                        overlayOpacity : 0.3,
+                                        overlayColor : '#000',
+                                        speedIn : 500,
+                                        hideOnOverlayClick : false,
+                                        enableEscapeButton : true,
+                                        type : 'iframe'
+                                    });
+                                }
+                            </SCRIPT>
+
+                            <FORM method=post name="login" onSubmit="return false">
+                                <input type=hidden name="rpage" value=https://www.elibrary.ru/item.asp?id=47466893>
+                                <tr>
+                                    <td width=100% align=center valign=top>
+
+                                        <div class="left-panel">
+
+                                            <table border=0 cellspacing=0 cellpadding=0 width=140>
+                                                <tr>
+                                                    <td width=100% align=center valign=top>
+                                                        <font color=#F26C4F>
+                                                            <b><span class="expandable" onClick="$('#win_login').slideToggle(500, function(){didScroll = true;})" title="Вход в библиотеку для зарегистрированных пользователей">ВХОД</span></b>
+                                                        </font>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            <div ID="win_login" class="expanded">
+                                                <div style="height: 10px;"></div>
+
+                                                <table border=0 cellspacing=0 cellpadding=2 width=140>
+
+                                                    <tr>
+                                                        <td width=100% align=left valign=top>
+                                                            &nbsp;<font color=#000000>IP-адрес компьютера:</font>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width=100% align=center valign=top>
+                                                            <font color=#00008f>217.29.182.235</font>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width=100% align=left valign=top>
+                                                            <div style="height: 2px;"></div>
+                                                            &nbsp;<font color=#000000>Название организации:</font>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width=100% align=center valign=top>
+
+                                                            <font color=#00008f>не определена</font>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td width=100% align=left valign=top>
+                                                            <div style="height: 2px;"></div>
+                                                            &nbsp;<font color=#000000>Имя пользователя<br>&nbsp;или адрес эл. почты:
+                                                        </font>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width=100% align=center valign=top>
+                                                            <div class="formfr" style="width:126px;"><input type=text id="login" name="login" value="" style="width:118px; text-align:center;" class="inputt" onKeyPress="login_enter(event)">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width=100% align=left valign=top>
+                                                            <div style="height: 2px;"></div>
+                                                            &nbsp;<font color=#000000>Пароль:</font>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align=center width=100%>
+                                                            <div class="formfr" style="width:126px;"><input type=password id="password" name="password" value="" style="width:118px; text-align:center;" class="inputt" onKeyPress="login_enter(event)">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align=center width=100%>
+
+                                                            <div style="height: 9px;"></div>
+                                                            <div class="butred" style="width: 52px;"
+                                                                 onClick="check_all()">Вход</div>
+                                                            <div style="height: 9px;"></div>
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
+                                                <table border=0 cellspacing=3 cellpadding=0 width=140>
+                                                    <tr valign=middle class="menub">
+                                                        <td align=center width=30><input type=checkbox name="knowme">
+                                                        </td>
+                                                        <td align=left width=101>Запомнить меня</td>
+                                                    </tr>
+                                                    <tr class="menub">
+                                                        <td align=right width=30 valign=top><img src="/images/or_kv.gif" width=7 height=7 hspace=9 vspace=1 class="shadow">
+                                                        </td>
+                                                        <td align=left width=101 valign=top><a
+                                                                href="/access_terms.asp">Правила доступа</a></td>
+                                                    </tr>
+                                                    <tr class="menub">
+                                                        <td align=right width=30 valign=top><img src="/images/or_kv.gif" width=7 height=7 hspace=9 vspace=1 class="shadow">
+                                                        </td>
+                                                        <td align=left width=101 valign=top><a
+                                                                href="/author_info.asp?isnew=1&rpage=https%3A%2F%2Fwww%2Eelibrary%2Eru%2Fitem%2Easp%3Fid%3D47466893">Регистрация</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="menub">
+                                                        <td align=right width=30 valign=top><img src="/images/or_kv.gif" width=7 height=7 hspace=9 vspace=1 class="shadow">
+                                                        </td>
+                                                        <td align=left width=101 valign=top><a
+                                                                href="/pass_request.asp">Забыли пароль?</a></td>
+                                                    </tr>
+
+
+                                                    <tr class="menub">
+                                                        <td align=right width=30 valign=top><img src="/images/or_kv.gif" width=7 height=7 hspace=9 vspace=1 class="shadow">
+                                                        </td>
+                                                        <td align=left width=101 valign=top><a
+                                                                href="javascript:sso_orgs()">Вход через Вашу
+                                                            организацию</a></td>
+                                                    </tr>
+
+
+                                                </table>
+                                                <div style="height: 4px;"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </FORM>
+
+                            <tr>
+                                <td><img src="/pic/1pix.gif" vspace=9></td>
+                            </tr>
+
+                            <tr>
+                                <td width=100% align=center valign=top>
+
+                                    <div class="left-panel">
+
+                                        <table border=0 cellspacing=0 cellpadding=0 width=140>
+                                            <tr>
+                                                <td width=100% align=center valign=top>
+                                                    <font color=#F26C4F>
+                                                        <b><span class="expandable" onClick="$('#win_basket').slideToggle(500, function(){didScroll = true;})" title="Состояние корзины в электронном магазине eLIBRARY.ru">КОРЗИНА</span></b>
+                                                    </font>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <div ID="win_basket" class="collapsed">
+                                            <div style="height: 10px;"></div>
+
+                                            <table border=0 cellspacing=0 cellpadding=2 width=140>
+
+                                                <tr>
+                                                    <td width=100% align=center valign=top>
+                                                        <div style="height: 2px;"></div>
+                                                        &nbsp;<font color=#000000>Всего в корзине:&nbsp;</font>
+                                                        <font color=#00008f>
+                                                            <b><span id="basket_num">0</span></b>&nbsp;публ.</font>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width=100% align=center valign=top>
+                                                        &nbsp;<font color=#000000>на сумму:&nbsp;</font>
+                                                        <font color=#00008f>
+                                                            <b><span id="basket_sum">0</span></b>&nbsp;руб.</font>
+                                                    </td>
+                                                </tr>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                        <div style="height: 10px;"></div>
+
+                        <table border=0 cellspacing=0 cellpadding=0 width=140>
+                            <tr class="menub">
+                                <td align=center width=30 valign=bottom><a
+                                        href="/basket.asp"><img src="images/basket.png" width=15 height=15 border=0></a>
+                                </td>
+                                <td align=left width=110 valign=top><a href="/basket.asp">Содержание корзины</a>
+                                </td>
+                            </tr>
+                        </table>
+
+                        </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><img src="/pic/1pix.gif" vspace=9></td>
+                </tr>
+                <SCRIPT LANGUAGE="JavaScript">
+                    function check_search(){
+                        if (document.forms["search"].ftext.value.length > 1) {
+                            var frm = document.forms["search"];
+                            frm.action="/query_results.asp";
+                            frm.target="";
+                            frm.submit();
+                        }
+                        else {
+                            alert("Введите не менее двух символов");
+                        }
+                    }
+                    function search_enter(event){
+                        var keycode;
+                        event = event || window.event;
+                        keycode = event.keyCode || event.which;
+                        if(keycode==13){
+                            check_search();
+                            return false;
+                        }
+                    }
+                </SCRIPT>
+                <FORM method=post name="search" onSubmit="return false">
+                    <input type="hidden" name="where_fulltext" value="on">
+                    <input type="hidden" name="where_name" value="on">
+                    <input type="hidden" name="where_abstract" value="on">
+                    <input type="hidden" name="where_keywords" value="on">
+                    <input type="hidden" name="where_affiliation" value="">
+                    <input type="hidden" name="where_references" value="">
+                    <input type="hidden" name="type_article" value="on">
+                    <input type="hidden" name="type_disser" value="on">
+                    <input type="hidden" name="type_book" value="on">
+                    <input type="hidden" name="type_report" value="on">
+                    <input type="hidden" name="type_conf" value="on">
+                    <input type="hidden" name="type_patent" value="on">
+                    <input type="hidden" name="type_preprint" value="on">
+                    <input type="hidden" name="type_grant" value="on">
+                    <input type="hidden" name="type_dataset" value="on">
+                    <input type="hidden" name="search_freetext" value="">
+                    <input type="hidden" name="search_morph" value="on">
+                    <input type="hidden" name="search_fulltext" value="">
+                    <input type="hidden" name="search_open" value="">
+                    <input type="hidden" name="search_results" value="">
+                    <input type="hidden" name="titles_all" value="">
+                    <input type="hidden" name="authors_all" value="">
+                    <input type="hidden" name="rubrics_all" value="">
+                    <input type="hidden" name="queryboxid" value="">
+                    <input type="hidden" name="itemboxid" value="">
+                    <input type="hidden" name="begin_year" value="">
+                    <input type="hidden" name="end_year" value="">
+                    <input type="hidden" name="issues" value="all">
+                    <input type="hidden" name="orderby" value="rank">
+                    <input type="hidden" name="order" value="rev">
+                    <input type="hidden" name="changed" value="1">
+
+                    <tr>
+                        <td width=100% align=center valign=top>
+
+                            <div class="left-panel">
+
+                                <table border=0 cellspacing=0 cellpadding=0 width=140>
+                                    <tr>
+                                        <td width=100% align=center valign=top>
+                                            <font color=#F26C4F>
+                                                <b><span class="expandable" onClick="$('#win_search').slideToggle(500, function(){didScroll = true;})" title="Поиск в Научной электронной библиотеке">ПОИСК</span></b>
+                                            </font>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div ID="win_search" class="collapsed">
+
+                                    <table border=0 cellspacing=0 cellpadding=0 width=140>
+                                        <tr>
+                                            <td width=140 align=center valign=top>
+                                                <div style="height: 10px;"></div>
+                                                <div class="formfr" style="width:126px;"><input type=text id="ftext" name="ftext" value="" style="width:118px;" class="inputt" onKeyPress="search_enter(event);">
+                                                </div>
+                                                <div style="height: 11px;"></div>
+
+                                                <div class="butblue" style="width: 52px;" onClick="check_search()">
+                                                    Найти</div>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="/pic/1pix.gif"></td>
+                                        </tr>
+                                    </table>
+
+                                    <table border=0 cellspacing=0 cellpadding=0 width=140>
+                                        <tr class="menub">
+                                            <td align=center width=20 valign=bottom><img src="/images/or_kv.gif" width=7 height=7 vspace=1 class="shadow">
+                                            </td>
+                                            <td align=left width=120 valign=top><a
+                                                    href="/querybox.asp?scope=newquery">Расширенный поиск</a></td>
+                                        </tr>
+                                    </table>
+                                    <div style="height: 4px;"></div>
+                                </div>
+                            </div>
+
+                </FORM>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td><img src="/pic/1pix.gif" vspace=9></td>
+    </tr>
+    <tr>
+        <td width=100% align=center valign=top>
+
+            <div class="left-panel">
+
+                <table border=0 cellspacing=0 cellpadding=0 width=140>
+                    <tr>
+                        <td width=100% align=center valign=top>
+                            <font color=#F26C4F>
+                                <b><span class="expandable" onClick="$('#win_goto').slideToggle(500, function(){didScroll = true;})" title="Быстрый переход на популярные страницы сайта">НАВИГАТОР</span></b>
+                            </font>
+                        </td>
+                    </tr>
+                </table>
+
+                <div ID="win_goto" class="collapsed">
+                    <div style="height: 10px;"></div>
+
+                    <table border=0 cellspacing=4 cellpadding=0 width=140>
+
+                        <tr valign=top>
+                            <td width=25 align=center><img src="/images/bl_kv.gif" border=0 width=7 height=7 hspace=3 class="shadow">
+                            </td>
+                            <td align=left width=115><a href="/titles.asp">ЖУРНАЛЫ</a></td>
+                        </tr>
+                        <tr valign=top>
+                            <td align=center><img src="/images/bl_kv.gif" border=0 width=7 height=7 hspace=3 class="shadow">
+                            </td>
+                            <td align=left><a href="/books.asp">КНИГИ</a></td>
+                        </tr>
+                        <tr valign=top>
+                            <td align=center><img src="/images/bl_kv.gif" border=0 width=7 height=7 hspace=3 class="shadow">
+                            </td>
+                            <td align=left><a href="/patents.asp">ПАТЕНТЫ</a></td>
+                        </tr>
+                        <tr valign=top>
+                            <td align=center><img src="/images/bl_kv.gif" border=0 width=7 height=7 hspace=3 class="shadow">
+                            </td>
+                            <td align=left><a href="/querybox.asp">ПОИСК</a></td>
+                        </tr>
+                        <tr valign=top>
+                            <td align=center><img src="/images/bl_kv.gif" border=0 width=7 height=7 hspace=3 class="shadow">
+                            </td>
+                            <td align=left><a href="/authors.asp">АВТОРЫ</a></td>
+                        </tr>
+                        <tr valign=top>
+                            <td align=center><img src="/images/bl_kv.gif" border=0 width=7 height=7 hspace=3 class="shadow">
+                            </td>
+                            <td align=left><a href="/orgs.asp">ОРГАНИЗАЦИИ</a></td>
+                        </tr>
+                        <tr valign=top>
+                            <td align=center><img src="/images/bl_kv.gif" border=0 width=7 height=7 hspace=3 class="shadow">
+                            </td>
+                            <td align=left><a href="/keywords.asp">КЛЮЧЕВЫЕ СЛОВА</a></td>
+                        </tr>
+                        <tr valign=top>
+                            <td align=center><img src="/images/bl_kv.gif" border=0 width=7 height=7 hspace=3 class="shadow">
+                            </td>
+                            <td align=left><a href="/rubrics.asp">РУБРИКАТОР</a></td>
+                        </tr>
+
+
+                    </table>
+
+                    <div style="height: 10px;"></div>
+
+                    <table border=0 cellspacing=0 cellpadding=0 width=140>
+                        <tr class="menub">
+                            <td align=right width=25 valign=bottom><img src="/images/or_kv.gif" width=7 height=7 border=0 hspace=6 vspace=1 class="shadow">
+                            </td>
+                            <td align=left width=115 valign=top><a href="/defaultx.asp">Начальная страница</a></td>
+                        </tr>
+                    </table>
+                    <div style="height: 4px;"></div>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td><img src="/pic/1pix.gif" vspace=9></td>
+    </tr>
+    <SCRIPT LANGUAGE="JavaScript">
+        function end_session(){
+
+            document.forms["session"].saveuser.value="1";
+
+            document.forms["session"].action="/end_session.asp";
+            document.forms["session"].target="";
+            document.forms["session"].submit()
+        }
+    </SCRIPT>
+    <FORM action="/end_session.asp" method=POST name="session">
+        <input type="hidden" name="saveuser" value="1">
+
+        <tr>
+            <td width=100% align=center valign=top>
+
+                <div class="left-panel">
+
+                    <table border=0 cellspacing=0 cellpadding=0 width=140>
+                        <tr>
+                            <td width=100% align=center valign=top>
+                                <font color=#F26C4F>
+                                    <b><span class="expandable" onClick="$('#win_session').slideToggle(500, function(){didScroll = true;})" title="Информация о текущей сессии пользователя">СЕССИЯ</span></b>
+                                </font>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                    <div ID="win_session" class="collapsed">
+                        <div style="height: 10px;"></div>
+
+                        <table border=0 cellspacing=0 cellpadding=2 width=140>
+                            <tr>
+                                <td width=100% align=left valign=top>
+                                    &nbsp;<font color=#000000>Имя пользователя:</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width=100% align=center valign=top>
+                                    <font color=#00008f>Незарегистрированный пользователь</font>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td width=100% align=left valign=top>
+                                    <div style="height: 2px;"></div>
+                                    &nbsp;<font color=#000000>Начало работы:</font>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width=100% align=center valign=top>
+                                    <font color=#00008f>28.04.2024 21:23</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width=100% align=left valign=top>
+                                    <div style="height: 2px;"></div>
+                                    &nbsp;<font color=#000000>Время работы:</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width=100% align=center valign=top>
+                                    <font color=#00008f>04:42</font>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div style="height: 10px;"></div>
+
+                        <table border=0 cellspacing=3 cellpadding=0 width=140>
+                            <tr class="menub">
+                                <td align=right width=30 valign=top><img src="/images/or_kv.gif" width=7 height=7 border=0 hspace=9 vspace=1 class="shadow">
+                                </td>
+                                <td align=left width=101 valign=top><a href="/project_user_office.asp">Личный
+                                    кабинет</a></td>
+                            </tr>
+                            <tr class="menub">
+                                <td align=right width=30 valign=top><img src="/images/or_kv.gif" width=7 height=7 border=0 hspace=9 vspace=1 class="shadow">
+                                </td>
+                                <td align=left width=101 valign=top><a href="javascript:end_session()">Закрыть
+                                    сессию</a></td>
+                            </tr>
+
+
+                        </table>
+                        <div style="height: 4px;"></div>
+
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td><img src="/pic/1pix.gif" vspace=9></td>
+        </tr>
+    </FORM>
+
+    <tr>
+        <td width=100% align=center valign=top>
+
+            <div class="left-panel">
+
+                <table border=0 cellspacing=0 cellpadding=0 width=140>
+                    <tr>
+                        <td width=100% align=center valign=top>
+                            <font color=#F26C4F>
+                                <b><span class="expandable" onClick="$('#win_contact').slideToggle(500, function(){didScroll = true;})" title="Контактная информация Научной электронной библиотеки">КОНТАКТЫ</span></b>
+                            </font>
+                        </td>
+                    </tr>
+                </table>
+
+                <div ID="win_contact" class="collapsed">
+                    <div style="height: 10px;"></div>
+
+                    <table border=0 cellspacing=0 cellpadding=2 width=140>
+
+
+                        <tr>
+                            <td width=100% align=left valign=top>
+                                <div style="height: 2px;"></div>
+                                &nbsp;<font color=#000000>Служба поддержки:</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=100% align=center valign=top>
+                                <font color=#00008f>+7 (495) 544-2494 доб. 1<br></font>
+                                <font color=#00008f><a href="mailto:support@elibrary.ru">support@elibrary.ru</a>
+                                </font>
+                            </td>
+                        </tr>
+        </td>
+    </tr>
+
+    <tr>
+        <td width=100% align=left valign=top>
+            <div style="height: 2px;"></div>
+            &nbsp;<font color=#000000>Издателям журналов:</font>
+        </td>
+    </tr>
+    <tr>
+        <td width=100% align=center valign=top>
+            <font color=#00008f>+7 (495) 544-2494 доб. 2<br></font>
+            <font color=#00008f><a href="mailto:publish@elibrary.ru">publish@elibrary.ru</a></font>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td width=100% align=left valign=top>
+            <div style="height: 2px;"></div>
+            &nbsp;<font color=#000000>Издателям книг:</font>
+        </td>
+    </tr>
+    <tr>
+        <td width=100% align=center valign=top>
+            <font color=#00008f>+7 (495) 544-2494 доб. 3<br></font>
+            <font color=#00008f><a href="mailto:book@elibrary.ru">book@elibrary.ru</a></font>
+        </td>
+    </tr>
+
+    <tr>
+        <td width=100% align=left valign=top>
+            <div style="height: 2px;"></div>
+            &nbsp;<font color=#000000>Science Space для издательств:</font>
+        </td>
+    </tr>
+    <tr>
+        <td width=100% align=center valign=top>
+            <font color=#00008f>+7 (495) 544-2494 доб. 4<br></font>
+            <font color=#00008f><a href="mailto:info@sciencespace.ru">info@sciencespace.ru</a></font>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td width=100% align=left valign=top>
+            <div style="height: 2px;"></div>
+            &nbsp;<font color=#000000>Science Index для организаций:</font>
+        </td>
+    </tr>
+    <tr>
+        <td width=100% align=center valign=top>
+            <font color=#00008f>+7 (495) 544-2494 доб. 4<br></font>
+            <font color=#00008f><a href="mailto:org@scienceindex.ru">org@scienceindex.ru</a></font>
+        </td>
+    </tr>
+
+    <tr>
+        <td width=100% align=left valign=top>
+            <div style="height: 2px;"></div>
+            &nbsp;<font color=#000000>Доступ к API:</font>
+        </td>
+    </tr>
+    <tr>
+        <td width=100% align=center valign=top>
+            <font color=#00008f>+7 (495) 544-2494 доб. 4<br></font>
+            <font color=#00008f><a href="mailto:api@elibrary.ru">api@elibrary.ru</a></font>
+        </td>
+    </tr>
+
+    <tr>
+        <td width=100% align=left valign=top>
+            <div style="height: 2px;"></div>
+            &nbsp;<font color=#000000>Подписчикам:</font>
+        </td>
+    </tr>
+    <tr>
+        <td width=100% align=center valign=top>
+            <font color=#00008f>+7 (495) 544-2494 доб. 6<br></font>
+            <font color=#00008f><a href="mailto:sales.team@elibrary.ru">sales.team@elibrary.ru</a></font>
+        </td>
+    </tr>
+
+    <tr>
+        <td width=100% align=left valign=top>
+            <div style="height: 2px;"></div>
+            &nbsp;<font color=#000000>Конференции, семинары:</font>
+        </td>
+    </tr>
+    <tr>
+        <td width=100% align=center valign=top>
+            <font color=#00008f>+7 (495) 544-2494 доб. 7<br></font>
+            <font color=#00008f><a href="mailto:conf@elibrary.ru">conf@elibrary.ru</a></font>
+        </td>
+    </tr>
+
+    <tr>
+        <td width=100% align=left valign=top>
+            <div style="height: 2px;"></div>
+            &nbsp;<font color=#000000>Почтовый адрес:</font>
+        </td>
+    </tr>
+    <tr>
+        <td width=100% align=center valign=top>
+            <font color=#00008f><a href="/contact_new.asp">117246, г. Москва,
+                Научный проезд, д. 14А, стр. 3, таунхаус 1</a></font>
+        </td>
+    </tr>
+
+    <tr>
+        <td width=100% align=left valign=top>
+            <div style="height: 2px;"></div>
+            &nbsp;<font color=#000000>Веб-сайт:</font>
+        </td>
+    </tr>
+    <tr>
+        <td width=100% align=center valign=top>
+            <font color=#00008f><a href="https://elibrary.ru">https://elibrary.ru</a></font>
+        </td>
+    </tr>
+
+    <tr>
+        <td width=100% align=left valign=top>
+            <div style="height: 2px;"></div>
+            &nbsp;<font color=#000000>Размещение рекламы:</font>
+        </td>
+    </tr>
+    <tr>
+        <td width=100% align=center valign=top>
+            <font color=#00008f><a href="mailto:reklama@elibrary.ru">reklama@elibrary.ru</a></font>
+        </td>
+    </tr>
+
+</table>
+
+<div style="height: 10px;"></div>
+
+<table border=0 cellspacing=0 cellpadding=0 width=140>
+    <tr class="menub">
+        <td align=right width=30 valign=bottom><img src="/images/or_kv.gif" width=7 height=7 border=0 hspace=6 vspace=1 class="shadow">
+        </td>
+        <td align=left width=110 valign=top><a href="/contact_new.asp">Схема проезда</a></td>
+    </tr>
+
+
+    <tr class="menub">
+        <td align=right width=30 valign=bottom><img src="/images/or_kv.gif" width=7 height=7 border=0 hspace=6 vspace=1 class="shadow">
+        </td>
+        <td align=left width=110 valign=top><a href="http://support.elibrary.ru">Задать вопрос</a></td>
+    </tr>
+
+    <tr class="menub">
+        <td align=right width=30 valign=bottom><img src="/images/or_kv.gif" width=7 height=7 border=0 hspace=6 vspace=1 class="shadow">
+        </td>
+        <td align=left width=110 valign=top><a href="/vacancy.asp">Вакансии</a></td>
+    </tr>
+
+</table>
+<div style="height: 4px;"></div>
+
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+    <td><img src="/pic/1pix.gif" vspace=9></td>
+</tr>
+<tr>
+    <td width=100% align=center valign=top>
+        <div style="width: 140px;" class="help-panel">
+            <table width=140 cellspacing=0 cellpadding=3 border=0>
+                <tr>
+                    <td width=15% align=right valign=top>
+                        <img src="/images/but_orange_i.gif" width=15 height=15 hspace=0 border=0>
+                    </td>
+                    <td width=85% align=left valign=middle>
+                        <font color=#00008f>По всем вопросам, связанным с работой в системе Science Index,
+                            обращайтесь, пожалуйста, в службу поддержки:<br><br>
+                            +7 (495) 544-2494<br><a href="mailto:support@elibrary.ru">support@elibrary.ru</a></font>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </td>
+</tr>
+
+<tr>
+    <td><img src="/pic/1pix.gif" vspace=9></td>
+</tr>
+
+
+</table>
+
+</td>
+<td align=left valign=top>
+
+    <table border=0 cellspacing=0 cellpadding=0>
+        <tr>
+            <td width=600 align=left valign=top>
+
+                <table width=580 border=0 cellspacing=0 cellpadding=0>
+                    <tr>
+                        <td width=100% align=left valign=top>
+
+
+
+                            <div class="header-panel">
+                                <div
+                                        style="margin: 0; border: 0; padding: 0 0 5px 0; text-align: center; font-size: 9pt;">
+                                    <font color=#5674b9><b>ИНФОРМАЦИЯ О ПУБЛИКАЦИИ</b></font>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+            <td width=200 align=right valign=middle id="rightcol">
+                <a
+                        href="/project_risc.asp"><img id="scienceindex_logo2" src="/images/scienceindex_logo2.svg" width=173 height=49 border=0 hspace=5 title="Информационно-аналитическая система SCIENCE INDEX"></a>
+            </td>
+        </tr>
+        <script language="JavaScript">
+            if (supportsSVG) {
+                document.getElementById("scienceindex_logo2").src="/images/scienceindex_logo2.svg";}
+            else {
+                document.getElementById("scienceindex_logo2").src="/images/scienceindex_logo2.png";}
+        </script>
+
+        <FORM method=post name="results" action="">
+
+            <tr>
+                <td align=left valign=top>
+
+                    <table width=550 cellspacing=0 cellpadding=3 border=0>
+                        <tr valign=middle>
+                            <td width=2%></td>
+                            <td width=25% align=left>eLIBRARY ID:&nbsp;<font color=#00008f><a
+                                    href="item.asp?id=47466893" rel="nofollow">47466893</a></font>
+                            </td>
+                            <td width=15% align=center>EDN:&nbsp;<font color=#00008f><a href="/asqewr"
+                                                                                        rel="nofollow">ASQEWR</a></font>
+                            </td>
+
+                            <td align=left width=5%><a href='javascript:qr_code("asqewr")'
+                                                       rel="nofollow"><img src="/images/qr_code2.png" width=16 height=16 class='help' title="Сгенерировать QR код для ссылки на этот документ"></a>
+                            </td>
+
+                            <td width=53% align=right></td>
+                        </tr>
+
+                    </table>
+                    <div style="height:5px;"></div>
+
+                    <table width=550 cellspacing=0 cellpadding=3 border=0>
+                        <tr align=center valign=middle>
+                            <td width=4></td>
+                            <td width=534>
+                                <span style="font-size: 9pt; color: #000000;"><b><p class='bigtext' style='color: #F26C4F;'>О ПРЕДСТАВЛЕНИИ КВАДРАТУР ОДНОГО КВАЗИДИФФЕРЕНЦИАЛЬНОГО УРАВНЕНИЯ В ВИДЕ СУММ РЯДОВ</p></b></span>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div style="width:580px; margin:0; border:0; padding:0; ">
+
+
+                        <div style="height:10px;"></div>
+                        <table width=550 border=0 cellspacing=0 cellpadding=3>
+                            <tr>
+                                <td width=24></td>
+                                <td width=514 valign=middle align=center>
+                                    <div style='display: inline-block; white-space: nowrap'>
+                                        <span class='help pointer' title='<b><font color=#F26C4F>Ватолкин Михаил Юрьевич</font></b><br>Ижевский государственный технический университет им. М.Т. Калашникова<br><a href="author_profile.asp?authorid=286347" target=_blank>Профиль автора в SCIENCE INDEX</a><br><a href="author_items.asp?authorid=286347" target=_blank>Список публикаций в РИНЦ</a>'><b><font color=#00008f>ВАТОЛКИН&nbsp;М.Ю.</font></b></span><img src='/images/about_author.gif' border=0 hspace=2 height=10 width=9 class='help pointer' title='Об авторе: <font color=#00008f>кандидат физико-математических наук, доцент, доцент кафедры «Прикладная математика и информационные технологии»</font>'>
+                                        <font color=#000000><sup>1</sup></font>
+                                    </div>
+                                    <div style="height:10px;"></div>
+                                    <font color=#000000><sup>1</sup></font>
+                                    &nbsp;<span class='help1 pointer' title='<b><font color=#F26C4F>Ижевский государственный технический университет им. М.Т. Калашникова</font></b> (Ижевск)<br><a href="org_profile.asp?id=7608" target=_blank>Профиль организации в SCIENCE INDEX</a><br><a href="org_items.asp?orgsid=7608" target=_blank>Список публикаций в РИНЦ</a>'><font color=#00008f>Ижевский государственный технический университет им. М.Т. Калашникова</font></span>,
+                                    426069, Удмуртская республика, г. Ижевск, ул. Студенческая, 7<br>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div style="height:12px;"></div>
+
+
+
+                        <table width=580 border=0 cellspacing=0 cellpadding=2>
+
+
+
+                            <tr>
+                                <td width=574 align=center valign=middle>
+                                    Тип:&nbsp;<font color=#00008f>статья в сборнике трудов конференции</font>
+                                    <span style="margin-left:20px;"></span>Язык:&nbsp;<font color=#00008f>русский
+                                </font>
+                                    <span style="margin-left:20px;"></span>Год издания:&nbsp;<font color=#00008f>
+                                    2021</font>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td width=574 align=center valign=middle>
+
+                                    <span style="margin-left:20px;"></span>Страницы:&nbsp;<font color=#00008f>
+                                    151-154</font>
+
+                                </td>
+                            </tr>
+
+
+
+                            <tr>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td width=574 align=center valign=middle>&nbsp;&nbsp;&nbsp;&nbsp; УДК:&nbsp;<font
+                                        color=#00008f>517.925.54</font>
+                                </td>
+                            </tr>
+
+
+                        </table>
+
+
+
+                        <div style="height:10px;"></div>
+                        <table width=550 border=0 cellspacing=0 cellpadding=3>
+                            <tr>
+                                <td colspan=2 align=left>
+                                    <font color=#000000>ИСТОЧНИК:</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width=34>&nbsp;</td>
+                                <td width=504 align=left valign=middle>
+                                    <div style="height:3px;"></div>
+                                    <a href="item.asp?id=47466852&selid=47466893">I ЛИПАНОВСКИЕ НАУЧНЫЕ
+                                        ЧТЕНИЯ</a><br>
+                                    Материалы региональной научной конференции. Ижевск, 2021<div style='height:5px;'></div>Издательство:&nbsp;<a
+                                        href="publisher_about.asp?pubsid=1662"
+                                        title="Список публикаций этого издательства">Ижевский государственный
+                                    технический университет имени М.Т. Калашникова</a> (Ижевск)
+
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div style="height:10px;"></div>
+                        <table width=550 border=0 cellspacing=0 cellpadding=3>
+                            <tr>
+                                <td colspan=2 align=left>
+                                    <font color=#000000>КОНФЕРЕНЦИЯ:</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width=34>&nbsp;</td>
+                                <td width=504 align=left valign=middle>
+                                    <div style="height:3px;"></div>
+                                    <font color=#00008f>ВЫСОКОПРОИЗВОДИТЕЛЬНЫЕ ВЫЧИСЛЕНИЯ, ВИЗУАЛЬНЫЕ ТЕХНОЛОГИИ И
+                                        МАТЕМАТИЧЕСКОЕ МОДЕЛИРОВАНИЕ СОПРЯЖЕННЫХ ЗАДАЧ МЕХАНИКИ СПЛОШНЫХ СРЕД</font>
+                                    <br>
+                                    <font color=#00008f>Ижевск, 15–16 июня 2021 года</font>
+
+                                </td>
+                            </tr>
+                        </table>
+
+
+                        <div style="height:10px;"></div>
+                        <table width=550 border=0 cellspacing=0 cellpadding=3>
+                            <tr>
+                                <td colspan=2 align=left>
+                                    <font color=#000000>КЛЮЧЕВЫЕ СЛОВА:</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width=34>&nbsp;</td>
+                                <td width=504 align=left valign=middle>
+                                    <div style="height:3px;"></div>
+                                    <a href="keyword_items.asp?id=8029020">КВАЗИПРОИЗВОДНЫЕ</a>,
+                                    <a href="keyword_items.asp?id=2610781">КВАЗИДИФФЕРЕНЦИАЛЬНОЕ УРАВНЕНИЕ</a>,
+                                    <a href="keyword_items.asp?id=4927406">ФУНДАМЕНТАЛЬНАЯ СИСТЕМА РЕШЕНИЙ</a>,
+                                    <a href="keyword_items.asp?id=975926">КВАДРАТУРЫ</a>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div style="height:10px;"></div>
+                        <table width=550 border=0 cellspacing=0 cellpadding=3>
+                            <tr>
+                                <td colspan=2 align=left>
+                                    <font color=#000000>АННОТАЦИЯ:</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width=34>&nbsp;</td>
+                                <td width=504 align=left valign=middle>
+
+                                    <div id="abstract1"
+                                         style="width:504px; border:0; margin:0; padding:0; text-align:left;">
+                                        <p align=justify style='margin-top: 0.3em;'>Рассматривается однородное
+                                            квазидифференциальное уравнение произвольного порядка достаточно общего
+                                            вида и такое, что его фундаментальная система решений выражается в
+                                            квадратурах. Эти интегралы представлены в настоящей работе в виде сумм
+                                            рядов. Одним из применений полученных представлений может быть
+                                            приближенное построение решений исходного уравнения (например, когда
+                                            квадратуры не выражаются в элементарных функциях).
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </table>
+
+
+
+                        <div style="height:10px;"></div>
+                        <table width=550 border=0 cellspacing=0 cellpadding=3>
+                            <tr>
+                                <td colspan=2 align=left>
+                                    <font color=#000000>БИБЛИОМЕТРИЧЕСКИЕ ПОКАЗАТЕЛИ:</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width=34>&nbsp;</td>
+                                <td width=504 align=left valign=middle>
+                                    <div style="height:3px;"></div>
+
+                                    <table width=100% border=0 cellspacing=0 cellpadding=3>
+
+                                        <tr align=left valign=bottom>
+                                            <td width=52%><img src="/images/but_orange_question.gif" class="imghelp help" title='<p>Учитывается или нет данная публикация в РИНЦ. Некоторые категории публикаций (например, статьи в реферативных, научно-популярных, информационных журналах) могут быть размещены на платформе elibrary.ru, но не учитываются в РИНЦ. Также не учитываются статьи в журналах и сборниках, исключенных из РИНЦ за нарушение научной и издательской этики.</p>'>&nbsp;&nbsp;Входит в РИНЦ:&nbsp;
+                                                <font color=#00008f>да</font>
+                                            </td>
+
+
+                                            <td width=48%><img src="/images/but_orange_question.gif" class="imghelp help" title='<p>Число цитирований данной публикации из публикаций, входящих в РИНЦ. Сама публикация при этом может и не входить в РИНЦ. Для сборников статей и книг, индексируемых в РИНЦ на уровне отдельных глав, указывается суммарное число цитирований всех статей (глав) и сборника (книги) в целом.</p>'>&nbsp;&nbsp;Цитирований в РИНЦ:&nbsp;
+                                                <font color=#00008f>0</font>
+                                            </td>
+                                        </tr>
+
+                                        <tr align=left valign=bottom>
+                                            <td><img src="/images/but_orange_question.gif" class="imghelp help" title='<p>Входит или нет данная публикация в ядро РИНЦ. Ядро РИНЦ включает все статьи, опубликованные в журналах, индексируемых в базах данных Web of Science Core Collection, Scopus или Russian Science Citation Index (RSCI).</p>'>&nbsp;&nbsp;Входит в ядро РИНЦ:&nbsp;
+                                                <font color=#00008f><span id="InCoreRisc">нет</span></font>
+                                            </td>
+
+                                            <td><img src="/images/but_orange_question.gif" class="imghelp help" title='<p>Число цитирований данной публикации из публикаций, входящих в ядро РИНЦ. Сама публикация при этом может не входить в ядро РИНЦ. Для сборников статей и книг, индексируемых в РИНЦ на уровне отдельных глав, указывается суммарное число цитирований всех статей (глав) и сборника (книги) в целом.</p>'>&nbsp;&nbsp;Цитирований из ядра РИНЦ:&nbsp;
+                                                <font color=#00008f>0</font>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr align=left valign=bottom>
+                                            <td><img src="/images/but_orange_question.gif" class="imghelp help" title='<p>Наличие в РИНЦ информации о рецензировании данной публикации.</p>'>&nbsp;&nbsp;Рецензии:&nbsp;
+                                                <font color=#00008f>нет данных</font>
+                                            </td>
+
+                                            <td></td>
+
+                                        </tr>
+
+
+                                    </table>
+
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div style="height:10px;"></div>
+                        <table width=550 border=0 cellspacing=0 cellpadding=3>
+                            <tr>
+                                <td colspan=2 align=left>
+                                    <font color=#000000>ТЕМАТИЧЕСКИЕ РУБРИКИ:</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width=34>&nbsp;</td>
+                                <td width=504 align=left valign=middle>
+                                    <div style="height:3px;"></div>
+
+                                    <table width=100% border=0 cellspacing=0 cellpadding=3>
+                                        <tr align=left valign=bottom>
+
+                                        <tr align=left valign=top>
+                                            <td width=27%><img src="/images/but_orange_question.gif" class="imghelp help" title='<p>Основная рубрика публикации в соответствии с рубрикатором OECD. Авторы, зарегистрированные в системе Science Index, имеют возможность уточнять тематические рубрики своих публикаций.</p>'>&nbsp;&nbsp;Рубрика&nbsp;OECD:&nbsp;
+                                            </td>
+                                            <td width=73%>
+                                                <font color=#00008f><span id="rubric_oecd">Mathematics</span></font>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <table width=100% border=0 cellspacing=0 cellpadding=3>
+                                        <tr align=left valign=bottom>
+
+                                        <tr align=left valign=top>
+                                            <td width=27%><img src="/images/but_orange_question.gif" class="imghelp help" title='<p>Основная рубрика публикации в соответствии с рубрикатором ASJC, используемом в Scopus. Авторы, зарегистрированные в системе Science Index, имеют возможность уточнять тематические рубрики своих публикаций.</p>'>&nbsp;&nbsp;Рубрика&nbsp;ASJC:&nbsp;
+                                            </td>
+                                            <td width=73%>
+                                                <font color=#00008f><span id="rubric_asjc">нет</span></font>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <table width=100% border=0 cellspacing=0 cellpadding=3>
+                                        <tr align=left valign=bottom>
+
+                                        <tr align=left valign=top>
+                                            <td width=27%><img src="/images/but_orange_question.gif" class="imghelp help" title='<p>Основная рубрика публикации в соответствии с рубрикатором ГРНТИ. Авторы, зарегистрированные в системе Science Index, имеют возможность уточнять тематические рубрики своих публикаций.</p>'>&nbsp;&nbsp;Рубрика&nbsp;ГРНТИ:&nbsp;
+                                            </td>
+                                            <td width=73%>
+                                                <font color=#00008f>
+                                                        <span id="rubric_grnti">Математика <span style='color:#F26C4F'>/</span>
+                                                        Обыкновенные дифференциальные уравнения
+                                                        <span style='color:#F26C4F'>/</span> Общая теория обыкновенных
+                                                        дифференциальных уравнений и систем уравнений</span></font>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <table width=100% border=0 cellspacing=0 cellpadding=3>
+                                        <tr align=left valign=bottom>
+
+                                        <tr align=left valign=top>
+                                            <td width=27%><img src="/images/but_orange_question.gif" class="imghelp help" title='<p>Основная рубрика публикации в соответствии с новой номенклатурой специальностей ВАК. Авторы, зарегистрированные в системе Science Index, имеют возможность уточнять тематические рубрики своих публикаций.</p>'>&nbsp;&nbsp;Специальность&nbsp;ВАК:&nbsp;
+                                            </td>
+                                            <td width=73%>
+                                                <font color=#00008f><span id="rubric_vak">нет</span></font>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </td>
+                            </tr>
+                        </table>
+
+
+                        <div style="height:10px;"></div>
+                        <table width=550 border=0 cellspacing=0 cellpadding=3>
+                            <tr>
+                                <td colspan=2 align=left>
+                                    <font color=#000000>АЛЬТМЕТРИКИ:</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width=34>&nbsp;</td>
+                                <td width=504 align=left valign=middle>
+                                    <div style="height:3px;"></div>
+
+                                    <table width=100% border=0 cellspacing=0 cellpadding=3>
+                                        <tr align=left valign=bottom>
+
+                                            <td width=30%><img src="/images/but_orange_question.gif" class="imghelp help" title='<p>Число просмотров страницы с описанием и аннотацией публикации посетителями elibrary.ru. Учитываются все просмотры, в том числе сделанные незарегистрированными пользователями. Повторные просмотры одним и тем же пользователем не учитываются. Зависит от года издания и появления публикации на сайте. В скобках указано число зарегистрированных пользователей, просматривавших данную страницу.</p>'>&nbsp;&nbsp;Просмотров:&nbsp;
+                                                <font color=#00008f>23 (2)</font>
+                                            </td>
+
+                                            <td width=35%><img src="/images/but_orange_question.gif" class="imghelp help" title='<p>Число загрузок полного текста публикации посетителями elibrary.ru. Если полный текст публикации отсутствует на elibrary.ru, показатель не рассчитывается. Повторные загрузки одним и тем же пользователем не учитываются. Зависит от года издания и появления публикации на сайте, а также от режима доступа к полному тексту (открытый или по подписке). В скобках указано число уникальных авторов, загрузивших данную публикацию.</p>'>&nbsp;&nbsp;Загрузок:&nbsp;
+                                                <font color=#00008f>0 (0)</font>
+                                            </td>
+
+                                            <td width=35%><img src="/images/but_orange_question.gif" class="imghelp help" title='<p>Число персональных подборок пользователей elibrary.ru, которые включают данную публикацию.</p>'>&nbsp;&nbsp;Включено в подборки:&nbsp;
+                                                <font color=#00008f>1</font>
+                                            </td>
+                                        </tr>
+
+                                        <tr align=left valign=bottom>
+
+                                            <td width=30%><img src="/images/but_orange_question.gif" class="imghelp help" title='<p>Число оценок публикации, сделанных учеными, зарегистрированными в системе Science Index. Для просмотра распределения оценок щелкните мышью на этом числе.</p>'>&nbsp;&nbsp;Всего оценок:&nbsp;
+                                                <font color=#00008f><span id="score_count">0</span></font>
+                                            </td>
+
+                                            <td width=35%><img src="/images/but_orange_question.gif" class="imghelp help" title='<p>Средняя оценка публикации учеными, зарегистрированными в системе Science Index. Значение соответствует следующим уровням оценки публикации:</p><br><table width=100% cellspacing=0 cellpadding=3 border=0>
+<tr><td width=15% align=center valign=top>
+<span style="font-size: 18pt; color: #F26C4F; font-family: Times New Roman, Times, serif; padding: 0;">5</span>
+</td>
+<td width=85% align=left valign=top><div>публикация международного уровня (на уровне требований Web of Science Core Collection)</div>
+</td></tr>
+
+<tr><td align=center valign=top>
+<span style="font-size: 18pt; color: #F26C4F; font-family: Times New Roman, Times, serif; padding: 0;">4</span>
+</td>
+<td align=left valign=top><div>публикация высокого уровня (достаточного для учета при защите докторской диссертации, достойна включения в ядро РИНЦ)</div></td></tr>
+
+<tr><td align=center valign=top>
+<span style="font-size: 18pt; color: #F26C4F; font-family: Times New Roman, Times, serif; padding: 0;">3</span>
+</td>
+<td align=left valign=top><div>публикация среднего уровня (достаточного для учета при защите кандидатской диссертации)</div></td></tr>
+
+<tr><td align=center valign=top>
+<span style="font-size: 18pt; color: #F26C4F; font-family: Times New Roman, Times, serif; padding: 0;">2</span>
+</td>
+<td align=left valign=top><div>публикация начального уровня (как правило, подготовленная студентами, аспирантами, молодыми учеными, при этом уровень достаточен для ее включения в РИНЦ)</div></td></tr>
+
+<tr><td align=center valign=top>
+<span style="font-size: 18pt; color: #F26C4F; font-family: Times New Roman, Times, serif; padding: 0;">1</span>
+</td>
+<td align=left valign=top><div>не научная, нарушающая научную этику или очень слабая публикация (должна быть исключена из РИНЦ)</div></td></tr>
+
+</table>'>&nbsp;&nbsp;Средняя оценка:&nbsp;<font color=#00008f><span id="avg_score"></span></font>
+                                            </td>
+
+                                            <td width=35%><img src="/images/but_orange_question.gif" class="imghelp help" title='<p>Число отзывов о публикации, сделанных учеными, зарегистрированными в системе Science Index. Для просмотра всех отзывов щелкните мышью на этом числе.</p>'>&nbsp;&nbsp;Всего отзывов:&nbsp;
+                                                <font color=#00008f><span id="comment_count">0</span></font>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+
+
+                                </td>
+                            </tr>
+                        </table>
+
+
+
+                        <div id="your_notes" class="collapsed">
+                            <table width=550 border=0 cellspacing=0 cellpadding=3>
+                                <tr>
+                                    <td colspan=2 align=left>
+                                        <font color=#000000>ВАША ЗАМЕТКА:</font>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width=34>&nbsp;</td>
+                                    <td width=504 align=left valign=middle>
+                                        <div style="height:3px;"></div>
+                                        <span id="your_notes_text"><p></p></span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div style="height:10px;"></div>
+                        </div>
+
+
+
+                        <div style="height:10px;"></div>
+                        <table width=550 border=0 cellspacing=0 cellpadding=3>
+                            <tr>
+                                <td colspan=2 align=left>ОБСУЖДЕНИЕ:</td>
+                            </tr>
+                            <tr>
+                                <td width=30></td>
+                                <td width=508 align=left valign=middle>
+
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table width=100% cellspacing=3 cellpadding=0 border=0>
+                            <tr>
+                                <td width=10% align=right valign=top><a
+                                        href="javascript:new_comments()"><img src="images/but_orange.gif" width=15 height=15 hspace=3 border=0 vspace=3></a>
+                                </td>
+                                <td width=90% align=left valign=middle><a href="javascript:new_comments()">Добавить
+                                    новый комментарий к этой публикации</a>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                </td>
+                <td align=right valign=top>
+
+                    <div id="panel_default"
+                         style="position: relative; width: 200px; height:0; margin: 0; border: 1px; padding: 0">
+                    </div>
+                    <div id="panel" style="position: relative; width: 200px; margin: 0; border: 0; padding: 0">
+
+                        <div style="width: 190px;" class="right-panel">
+
+                            <table width=190 cellspacing=0 cellpadding=3 border=0>
+
+                                <input type="hidden" name="itembox_name" value="">
+                                <input type="hidden" name="id" value="47466893">
+                                <input type="hidden" name="did" value="47466893">
+                                <input type="hidden" name="sid" value="584751020">
+                                <input type="hidden" name="noteid" value="47466893">
+                                <input type="hidden" name="disspage" value="">
+                                <input type="hidden" name="counterid" value="">
+                                <input type="hidden" name="commentid" value="">
+                                <input type="hidden" name="reply" value="">
+                                <input type="hidden" name="linkid" value="">
+                                <input type="hidden" name="paysum" value="">
+                                <input type="hidden" name="payitemid" value="">
+                                <input type="hidden" name="authorid" value="">
+                                <input type="hidden" name="tid47466893" value="47466893">
+                                <input type="hidden" name="filenum" value="1">
+                                <input type="hidden" name="fileid" value="47466893">
+                                <input type="hidden" name="urlnum" value="1">
+                                <input type="hidden" name="items_all" value="">
+
+                                <tr>
+                                    <td colspan=2 align=center valign=top>
+                                        <font color=#F26C4F><b>ИНСТРУМЕНТЫ</b></font>
+                                        <div style="height:10px;"></div>
+                                    </td>
+                                </tr>
+
+
+
+                                <tr>
+                                    <td width=15% align=center valign=top>
+                                        <a
+                                                href="item.asp?id=47466852&selid=47466893"><img src="images/but_orange.gif" width=15 height=15 hspace=3 border=0></a>
+
+                                    </td>
+
+                                    <td width=85% align=left valign=middle>
+                                        <a href="item.asp?id=47466852&selid=47466893">Содержание сборника</a>
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan=2>
+                                        <div style="height:10px;"></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td width=15% align=center valign=top></td>
+                                    <td width=85% align=left valign=middle>Загрузить:
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td width=15% align=center valign=top><a
+                                            href="javascript:file_article(47466893, 1)" rel="nofollow"
+                                            title=""><img src="/images/download_green.png" width=16 hspace=2 border=0></a>
+                                    </td>
+                                    <td width=85% align=left valign=middle><a
+                                            href="javascript:file_article(47466893, 1)" rel="nofollow" class="help"
+                                            title="">Полный текст</a> (PDF)
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td width=15% align=center valign=top>
+                                        <a href="javascript:email_article()"
+                                           rel="nofollow"><img src="images/mailto.png" width=16 hspace=2 border=0></a>
+                                    </td>
+                                    <td width=85% align=left valign=middle><a href="javascript:email_article()"
+                                                                              rel="nofollow">Отправить публикацию по электронной почте</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan=2 align=center>
+                                        <div class="formfr"><input type="text" id="email" name="email" value="" style="width:172px; text-align: center;" class="inputt">
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td colspan=2>
+                                        <div style="height:10px;"></div>
+                                    </td>
+                                </tr>
+
+
+
+                                <tr>
+                                    <td width=15% align=center valign=top>
+                                        <a
+                                                href="javascript:itembox_add()"><img src="images/but_orange.gif" width=15 height=15 hspace=3 border=0></a>
+                                    </td>
+                                    <td width=85% align=left valign=middle><a
+                                            href="javascript:itembox_add()">Добавить публикацию в подборку</a></td>
+                                </tr>
+
+
+
+                                <tr>
+                                    <td colspan=2 align=center>
+                                        <div class="formfr"><select name="itemboxid" id="itemboxid" style="width:180px" class="input">
+
+                                            <option value="0" selected>Новая подборка
+                                        </select></div>&nbsp;
+                                    </td>
+                                </tr>
+
+
+
+
+                                <tr>
+                                    <td colspan=2>
+                                        <div style="height:10px;"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width=15% align=center valign=top>
+                                        <a
+                                                href="javascript:edit_notes()"><img src="images/but_orange.gif" width=15 height=15 hspace=3 border=0 class="help" title='<p>Вы можете добавить свою персональную заметку к данной публикации, которая поможет Вам в работе с публикациями и подборками публикаций на elibrary.ru. Ваша заметка будет показываться только Вам.</p>'></a>
+                                    </td>
+                                    <td width=85% align=left valign=middle><a
+                                            href="javascript:edit_notes()">Редактировать Вашу заметку к
+                                        публикации</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td width=15% align=center valign=top>
+                                        <a
+                                                href="javascript:new_comments()"><img src="images/but_orange.gif" width=15 height=15 hspace=3 border=0></a>
+                                    </td>
+                                    <td width=85% align=left valign=middle><a
+                                            href="javascript:new_comments()">Обсудить эту публикацию с другими
+                                        читателями</a>
+                                    </td>
+                                </tr>
+
+
+
+
+        </FORM>
+
+        <tr>
+            <td width=15% align=center valign=top>
+                <a
+                        href='/similar_items.asp?itemid=47466893'><img src="images/but_orange.gif" width=15 height=15 hspace=3 border=0></a>
+            </td>
+            <td width=85% align=left valign=middle><a href='/similar_items.asp?itemid=47466893'>Найти близкие по
+                тематике публикации</a>
+            </td>
+        </tr>
+
+
+
+    </table>
+    </div>
+
+    </div>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+    $(function() {
+        $(".help").tooltip({
+            position: "top right",
+            offset: [-15, -180],
+            effect: "fade",
+            fadeInSpeed: 400,
+            fadeOutSpeed: 400,
+            delay: 400,
+            predelay: 400,
+            opacity: 1.0
+        });
+    });
+    $(function() {
+        $(".help1").tooltip({
+            position: "top right",
+            offset: [-15, -300],
+            effect: "fade",
+            fadeInSpeed: 400,
+            fadeOutSpeed: 400,
+            delay: 400,
+            predelay: 400,
+            opacity: 1.0
+        });
+    });
+</script>
+
+
+<br><br>
+<table width=970 height=40 border=0 cellpadding=0 cellspacing=0 id="footer">
+    <tr align=center valign=middle class="menug">
+        <td width=15% valign="bottom">
+
+        </td>
+        <td width=70%>
+            <font color=#00008f><span style="position: relative; top: 3px; right: 15px; color: #F26C4F;">*</span><a
+                    href="/copyright.asp">&copy; 2000-2024 ООО НАУЧНАЯ ЭЛЕКТРОННАЯ БИБЛИОТЕКА. Все права
+                защищены</a></font>
+            <span style="position: relative; top: 3px; left: 15px; color: #F26C4F;">*</span>
+        </td>
+        <td width=15% valign="bottom">
+
+        </td>
+    </tr>
+</table>
+
+<!-- Yandex.Metrika -->
+<div style="display:none;">
+    <script type="text/javascript">
+        (function(w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter171463 = new Ya.Metrika(171463);
+                } catch(e) {}
+            });
+        })(window, 'yandex_metrika_callbacks');
+    </script>
+</div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript>
+    <div style="position:absolute"><img src="//mc.yandex.ru/watch/171463" alt="" /></div>
+</noscript>
+<!-- /Yandex.Metrika -->
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-9339902-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
+</script>
+
+
+<br><br><br>
+</td>
+</tr>
+</table>
+
+</html>

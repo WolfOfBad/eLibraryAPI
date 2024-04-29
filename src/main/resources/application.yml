@@ -5,5 +5,14 @@ spring:
   application:
     name: eLibraryApi
 
+server:
+  port: 8081
+
 logging:
   config: classpath:log4j2-plain.xml
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+    oauth:
+      app-name: eLibraryAPI

@@ -1,0 +1,88 @@
+openapi: 3.0.1
+info:
+  title: eLibray API
+  version: 1.0.0
+  contact:
+    name: Igor Mechkov
+    url: https://github.com/WolfOfBad
+paths:
+  /article-info/{id}:
+    get:
+      summary: Получить информацию о статье
+      operationId: getArticleInfo
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Информация успешно получена
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArticleResponse'
+        '400':
+          description: Некорректные параметры запроса
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        '429':
+          description: Слишком много запросов к сайту
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RateLimitErrorResponse'
+
+
+components:
+  schemas:
+    ArticleResponse:
+      type: object
+      properties:
+        eLibraryId:
+          type: integer
+          format: int64
+        title:
+          type: string
+        authors:
+          type: array
+          items:
+            type: string
+        workPlace:
+          type: string
+        articleType:
+          type: string
+        language:
+          type: string
+        year:
+          type: integer
+          format: int64
+        url:
+          type: string
+          format: uri
+    RateLimitErrorResponse:
+      type: object
+      properties:
+        description:
+          type: string
+        message:
+          type: string
+    ApiErrorResponse:
+      type: object
+      properties:
+        description:
+          type: string
+        code:
+          type: string
+        exceptionName:
+          type: string
+        exceptionMessage:
+          type: string
+        stacktrace:
+          type: array
+          items:
+            type: string
