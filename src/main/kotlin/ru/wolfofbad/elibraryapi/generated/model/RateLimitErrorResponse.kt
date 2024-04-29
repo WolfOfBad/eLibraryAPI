@@ -11,11 +11,8 @@ import io.swagger.v3.oas.annotations.media.Schema
 data class RateLimitErrorResponse(
 
     @Schema(example = "null", description = "")
-    @get:JsonProperty("description") val description: kotlin.String? = null,
+    @get:JsonProperty("description") val description: String? = null,
 
     @Schema(example = "null", description = "")
-    @get:JsonProperty("message") val message: kotlin.String? = null
-) {
-
-}
-
+    @get:JsonProperty("message") val message: String? = null
+)

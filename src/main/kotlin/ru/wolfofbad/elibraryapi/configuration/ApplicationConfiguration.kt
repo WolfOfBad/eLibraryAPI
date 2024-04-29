@@ -10,5 +10,4 @@ data class ApplicationConfiguration(
     @Name("eLibrary-url")
     @DefaultValue("https://www.elibrary.ru")
     val eLibraryUrl: URI
-) {
-}
+)

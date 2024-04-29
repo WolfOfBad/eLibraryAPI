@@ -17,29 +17,28 @@ import jakarta.validation.Valid
  */
 data class ArticleResponse(
     @Schema(example = "0", description = "")
-    @get:JsonProperty("eLibraryId") val eLibraryId: kotlin.Long? = null,
+    @get:JsonProperty("eLibraryId") val eLibraryId: Long? = null,
 
     @Schema(example = "null", description = "")
-    @get:JsonProperty("title") val title: kotlin.String? = null,
+    @get:JsonProperty("title") val title: String? = null,
 
     @Schema(example = "null", description = "")
-    @get:JsonProperty("authors") val authors: kotlin.collections.List<kotlin.String>? = null,
+    @get:JsonProperty("authors") val authors: List<String>? = null,
 
     @Schema(example = "null", description = "")
-    @get:JsonProperty("workPlace") val workPlace: kotlin.String? = null,
+    @get:JsonProperty("workPlace") val workPlace: String? = null,
 
     @Schema(example = "null", description = "")
-    @get:JsonProperty("articleType") val articleType: kotlin.String? = null,
+    @get:JsonProperty("articleType") val articleType: String? = null,
 
     @Schema(example = "null", description = "")
-    @get:JsonProperty("language") val language: kotlin.String? = null,
+    @get:JsonProperty("language") val language: String? = null,
 
     @Schema(example = "0", description = "")
-    @get:JsonProperty("year") val year: kotlin.Long? = null,
+    @get:JsonProperty("year") val year: Long? = null,
 
     @field:Valid
     @Schema(example = "null", description = "")
     @get:JsonProperty("url") val url: java.net.URI? = null
-) {
-}
+)
 

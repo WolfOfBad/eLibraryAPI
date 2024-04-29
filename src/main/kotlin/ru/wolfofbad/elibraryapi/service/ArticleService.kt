@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service
 import ru.wolfofbad.elibraryapi.configuration.ApplicationConfiguration
 import ru.wolfofbad.elibraryapi.exception.RateLimitExceededException
 import ru.wolfofbad.elibraryapi.generated.model.ArticleResponse
-import java.io.File
 import java.net.URI
 
 @Service

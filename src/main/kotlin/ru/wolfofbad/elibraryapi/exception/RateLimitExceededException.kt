@@ -1,4 +1,3 @@
 package ru.wolfofbad.elibraryapi.exception
 
-class RateLimitExceededException: RuntimeException() {
-}
+class RateLimitExceededException: RuntimeException()

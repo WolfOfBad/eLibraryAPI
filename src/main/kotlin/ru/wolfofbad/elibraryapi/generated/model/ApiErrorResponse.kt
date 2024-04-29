@@ -14,20 +14,18 @@ import io.swagger.v3.oas.annotations.media.Schema
 data class ApiErrorResponse(
 
     @Schema(example = "null", description = "")
-    @get:JsonProperty("description") val description: kotlin.String? = null,
+    @get:JsonProperty("description") val description: String? = null,
 
     @Schema(example = "null", description = "")
-    @get:JsonProperty("code") val code: kotlin.String? = null,
+    @get:JsonProperty("code") val code: String? = null,
 
     @Schema(example = "null", description = "")
-    @get:JsonProperty("exceptionName") val exceptionName: kotlin.String? = null,
+    @get:JsonProperty("exceptionName") val exceptionName: String? = null,
 
     @Schema(example = "null", description = "")
-    @get:JsonProperty("exceptionMessage") val exceptionMessage: kotlin.String? = null,
+    @get:JsonProperty("exceptionMessage") val exceptionMessage: String? = null,
 
     @Schema(example = "null", description = "")
-    @get:JsonProperty("stacktrace") val stacktrace: kotlin.collections.List<kotlin.String>? = null
-) {
-
-}
+    @get:JsonProperty("stacktrace") val stacktrace: List<String>? = null
+)
 
