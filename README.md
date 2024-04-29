@@ -1,3 +1,4 @@
+![Build](https://github.com/WolfOfBad/eLibraryAPI/actions/workflows/build.yml/badge.svg)
 # eLibrary API
 
 
