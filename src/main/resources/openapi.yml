@@ -61,6 +61,11 @@ components:
         year:
           type: integer
           format: int64
+        journalTitle:
+          type: string
+        number:
+          type: integer
+          format: int64
         url:
           type: string
           format: uri

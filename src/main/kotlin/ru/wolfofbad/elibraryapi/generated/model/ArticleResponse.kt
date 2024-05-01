@@ -13,6 +13,8 @@ import jakarta.validation.Valid
  * @param articleType
  * @param language
  * @param year
+ * @param journalTitle
+ * @param number
  * @param url
  */
 data class ArticleResponse(
@@ -36,6 +38,12 @@ data class ArticleResponse(
 
     @Schema(example = "0", description = "")
     @get:JsonProperty("year") val year: Long? = null,
+
+    @Schema(example = "null", description = "")
+    @get:JsonProperty("journalTitle") val journalTitle: String? = null,
+
+    @Schema(example = "0", description = "")
+    @get:JsonProperty("number") val number: Long? = null,
 
     @field:Valid
     @Schema(example = "null", description = "")
