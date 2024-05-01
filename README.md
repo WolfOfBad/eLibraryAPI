@@ -19,9 +19,10 @@
 
 ---
 
-Чтобы начать использовать апи, достаточно поднять его в `docker compose`. Пример настройки описан в `compose.yml`.
+Чтобы начать использовать апи, достаточно поднять его в `docker compose`. Пример настройки описан в [`compose.yml`](https://github.com/WolfOfBad/eLibraryAPI/blob/main/compose.yml).
 Также нужно настроить доступ к google api: https://developers.google.com/sheets/api/quickstart/java?hl=ru, 
 скачать оттуда `json` с ключами и передать его в compose. `Sheet id` находится в самой ссылке на таблицу.
+При запуске контейнера в консоли появится ссылка с аутентификацией, по которой надо пройти и несколько раз нажать продолжить.
 
 ---
 Проект написан на `Kotlin`, с использованием `Spring Boot 3`.
