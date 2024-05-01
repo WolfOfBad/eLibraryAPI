@@ -21,7 +21,7 @@
 
 Чтобы начать использовать апи, достаточно поднять его в `docker compose`. Пример настройки описан в `compose.yml`.
 Также нужно настроить доступ к google api: https://developers.google.com/sheets/api/quickstart/java?hl=ru, 
-скачать оттуда `json` с ключами и передать его в compose.
+скачать оттуда `json` с ключами и передать его в compose. `Sheet id` находится в самой ссылке на таблицу.
 
 ---
 Проект написан на `Kotlin`, с использованием `Spring Boot 3`.
