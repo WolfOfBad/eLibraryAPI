@@ -1,3 +1,3 @@
 FROM openjdk:21
-ADD target/scrapper.jar app.jar
+ADD build/libs eLibraryApi-0.0.1.jar
 ENTRYPOINT java -jar app.jar
