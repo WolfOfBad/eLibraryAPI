@@ -1,12 +1,16 @@
 app:
-  e-library-url: https://elibrary.ru
+  e-library-url: ${ELIBRARY_URL}
+
+gsheets:
+  credentials: ${CREDENTIALS_PATH}
+  sheet-id: ${SHEET_ID}
 
 spring:
   application:
     name: eLibraryApi
 
 server:
-  port: 8081
+  port: ${PORT}
 
 logging:
   config: classpath:log4j2-plain.xml
