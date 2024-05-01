@@ -1,3 +1,9 @@
+FROM gradle:8.7.0-jdk21-alpine AS build
+COPY . /home/gradle/src
+WORKDIR /home/gradle/src
+RUN gradle build --no-daemon
+
 FROM openjdk:21
-ADD build/libs/eLibraryApi-0.0.1.jar app.jar
-ENTRYPOINT java -jar app.jar
+COPY --from=build /home/gradle/src/build/libs/*.jar /app/app.jar
+
+ENTRYPOINT java -jar /app/app.jar
