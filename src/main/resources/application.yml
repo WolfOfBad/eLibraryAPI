@@ -4,6 +4,7 @@ app:
 gsheets:
   credentials: ${CREDENTIALS_PATH}
   sheet-id: ${SHEET_ID}
+  oauth-port: ${OAUTH_PORT}
 
 spring:
   application:

@@ -18,7 +18,8 @@ import java.io.InputStreamReader
 @ConfigurationProperties(prefix = "gsheets", ignoreUnknownFields = false)
 data class GoogleSheetsConfiguration(
     val credentials: File,
-    val sheetId: String
+    val sheetId: String,
+    val oauthPort: Int
 ) {
     @Bean
     fun authorizeCredential(): Credential {
@@ -34,8 +35,12 @@ data class GoogleSheetsConfiguration(
             clientSecrets,
             scopes
         ).setDataStoreFactory(MemoryDataStoreFactory())
-            .setAccessType("offline").build()
-        val credential: Credential = AuthorizationCodeInstalledApp(flow, LocalServerReceiver()).authorize("user")
+            .setAccessType("online")
+            .build()
+
+        val receiver = LocalServerReceiver.Builder().setPort(oauthPort).build()
+
+        val credential: Credential = AuthorizationCodeInstalledApp(flow, receiver).authorize("user")
 
         return credential
     }
