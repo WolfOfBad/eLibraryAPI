@@ -35,6 +35,8 @@ class ArticleService(
         val type = getType(info)
         val language = getLanguage(info)
         val year = getYear(info)
+        val journalTitle = getJournalTitle(info)
+        val number = getNumber(info)
 
         return ArticleResponse(
             id,
@@ -44,6 +46,8 @@ class ArticleService(
             type,
             language,
             year,
+            journalTitle,
+            number,
             url
         )
     }
@@ -147,7 +151,33 @@ class ArticleService(
         } catch (e: Exception) {
             null
         }
+    }
 
+    private fun getJournalTitle(info: Element): String? {
+        return try {
+            info.child(3)
+                .child(5)
+                .child(0)
+                .child(1)
+                .child(1)
+                .child(1)
+                .ownText()
+        } catch (e: Exception) {
+            null
+        }
+    }
 
+    private fun getNumber(info: Element): Long? {
+        return try {
+            info.child(3)
+                .child(3)
+                .getElementsContainingOwnText("Номер:")
+                .first()
+                ?.child(1)
+                ?.ownText()
+                ?.toLong()
+        } catch (e: Exception) {
+            return null
+        }
     }
 }

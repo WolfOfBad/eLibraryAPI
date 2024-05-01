@@ -45,6 +45,8 @@ class ArticleServiceTest : FunSpec({
             "статья в сборнике трудов конференции",
             "английский",
             2022,
+            "TRANSPORTATION RESEARCH PROCEDIA",
+            null,
             URI.create("http://localhost:9000/item.asp?id=1")
         )
     }
@@ -76,6 +78,8 @@ class ArticleServiceTest : FunSpec({
             "статья в журнале - научная статья",
             "русский",
             2023,
+            "ВЕСТНИК ЭКОНОМИЧЕСКОГО ПРАВОСУДИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ",
+            1,
             URI.create("http://localhost:9000/item.asp?id=1")
         )
     }
@@ -107,6 +111,8 @@ class ArticleServiceTest : FunSpec({
             "статья в сборнике трудов конференции",
             "русский",
             2021,
+            "I ЛИПАНОВСКИЕ НАУЧНЫЕ ЧТЕНИЯ",
+            null,
             URI.create("http://localhost:9000/item.asp?id=1")
         )
     }
