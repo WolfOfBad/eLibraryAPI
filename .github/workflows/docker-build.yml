@@ -44,4 +44,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: ghcr.io/wolfofbad/elibraryApi:latest
+          tags: ghcr.io/wolfofbad/elibraryapi:latest
