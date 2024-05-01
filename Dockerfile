@@ -1,3 +1,3 @@
 FROM openjdk:21
-ADD build/libs eLibraryApi-0.0.1.jar
+ADD build/libs/eLibraryApi-0.0.1.jar app.jar
 ENTRYPOINT java -jar app.jar
