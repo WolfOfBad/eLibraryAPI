@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  api:
+    image: ghcr.io/wolfofbad/elibraryapi:latest
+    ports:
+      - "8081:8081"
+      - "8082:8082"
+    environment:
+      ELIBRARY_URL: "https://www.elibrary.ru/"
+      CREDENTIALS_PATH: "/credentials/credentials.json"
+      SHEET_ID: "1av37WJ1eJKgkhwqPMQCILoYXFf_-uT0WzOTLEzm_2Tw"
+      PORT: 8081
+      OAUTH_PORT: 8082
+    volumes:
+      - ./credentials:/credentials
