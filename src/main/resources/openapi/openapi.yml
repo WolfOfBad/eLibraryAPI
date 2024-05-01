@@ -36,7 +36,25 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/RateLimitErrorResponse'
-
+  /sheets/append:
+    post:
+      summary: "Добавить запись в google sheets"
+      operationId: postArticleInfo
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddArticleRequest'
+        required: true
+      responses:
+        '200':
+          description: 'Данные успешно сохранены'
+        '400':
+          description: Некорректные параметры запроса
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
 
 components:
   schemas:
@@ -76,6 +94,13 @@ components:
           type: string
         message:
           type: string
+    AddArticleRequest:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: string
     ApiErrorResponse:
       type: object
       properties:
