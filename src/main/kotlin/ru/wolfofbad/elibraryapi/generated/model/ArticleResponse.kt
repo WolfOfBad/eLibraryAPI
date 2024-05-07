@@ -28,7 +28,7 @@ data class ArticleResponse(
     @get:JsonProperty("authors") val authors: List<String>? = null,
 
     @Schema(example = "null", description = "")
-    @get:JsonProperty("workPlace") val workPlace: String? = null,
+    @get:JsonProperty("workPlace") val workPlace: List<String>? = null,
 
     @Schema(example = "null", description = "")
     @get:JsonProperty("articleType") val articleType: String? = null,
