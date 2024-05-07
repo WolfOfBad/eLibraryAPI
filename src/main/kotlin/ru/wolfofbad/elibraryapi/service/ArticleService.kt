@@ -6,7 +6,10 @@ import org.springframework.stereotype.Service
 import ru.wolfofbad.elibraryapi.configuration.ApplicationConfiguration
 import ru.wolfofbad.elibraryapi.exception.RateLimitExceededException
 import ru.wolfofbad.elibraryapi.generated.model.ArticleResponse
+import java.io.File
 import java.net.URI
+import java.util.stream.Collectors
+import java.util.stream.Stream
 
 @Service
 class ArticleService(
@@ -85,32 +88,34 @@ class ArticleService(
         }
     }
 
-    private fun getWorkplace(info: Element): String? {
+    private fun getWorkplace(info: Element): List<String> {
         return try {
-            val element = info.child(3)
+            info.child(3)
                 .child(1)
                 .child(0)
                 .child(0)
                 .child(1)
+                .children().stream()
+                    .filter{ it.hasClass("help1 pointer") || it.attributes().get("color").equals("#00008f") }
+                    .map { it.text() }
+                    .collect(Collectors.toList())
 
-            return element.child(element.childrenSize() - 2)
-                .select("font")
-                .first()
-                ?.ownText()
         } catch (e: Exception) {
-            null
+            emptyList()
         }
 
     }
 
     private fun getType(info: Element): String? {
         return try {
-            info.child(3)
-                .child(3)
+            info.child(3).children().stream()
+                .filter{it.text().lastIndexOf("Тип:") != -1}
+                .findFirst().get()
                 .getElementsContainingOwnText("Тип")
                 .first()
                 ?.child(0)
                 ?.ownText()
+
         } catch (e: Exception) {
             null
         }
@@ -118,12 +123,14 @@ class ArticleService(
 
     private fun getLanguage(info: Element): String? {
         return try {
-            info.child(3)
-                .child(3)
+            info.child(3).children().stream()
+                .filter{it.text().lastIndexOf("Язык:") != -1}
+                .findFirst().get()
                 .getElementsContainingOwnText("Язык")
                 .first()
                 ?.child(2)
                 ?.ownText()
+
         } catch (e: Exception) {
             null
         }
@@ -132,22 +139,15 @@ class ArticleService(
     private fun getYear(info: Element): Long? {
         return try {
             // try to find "Год:"
-            val first = info.child(3)
-                .child(3)
-                .getElementsContainingOwnText("Год:")
+            val first = info.child(3).stream()
+                .filter{it.text().lastIndexOf("Год:") != -1 || it.text().lastIndexOf("Год издания:") != -1}
+                .findFirst().get()
+                .getElementsContainingOwnText("Год")
                 .first()
                 ?.child(3)
                 ?.ownText()
 
-            // try to find "Год издания:"
-            val second = info.child(3)
-                .child(3)
-                .getElementsContainingOwnText("Год издания:")
-                .first()
-                ?.child(4)
-                ?.ownText()
-
-            return first?.toLong() ?: second?.toLong()
+            return first?.toLong()
         } catch (e: Exception) {
             null
         }
@@ -155,13 +155,16 @@ class ArticleService(
 
     private fun getJournalTitle(info: Element): String? {
         return try {
-            info.child(3)
-                .child(5)
-                .child(0)
-                .child(1)
-                .child(1)
-                .child(1)
-                .ownText()
+
+            info.child(3).children().stream()
+                    .filter{it.text().lastIndexOf("ЖУРНАЛ:") != -1}
+                    .findFirst().get()
+                    .child(0)
+                    .child(1)
+                    .child(1)
+                    .child(1)
+                    .ownText()
+
         } catch (e: Exception) {
             null
         }
@@ -169,13 +172,14 @@ class ArticleService(
 
     private fun getNumber(info: Element): Long? {
         return try {
-            info.child(3)
-                .child(3)
-                .getElementsContainingOwnText("Номер:")
-                .first()
-                ?.child(1)
-                ?.ownText()
-                ?.toLong()
+            info.child(3).stream()
+                    .filter{it.text().lastIndexOf("Номер:") != -1}
+                    .findFirst().get()
+                    .getElementsContainingOwnText("Номер:")
+                    .first()
+                    ?.child(1)
+                    ?.ownText()
+                    ?.toLong()
         } catch (e: Exception) {
             return null
         }
