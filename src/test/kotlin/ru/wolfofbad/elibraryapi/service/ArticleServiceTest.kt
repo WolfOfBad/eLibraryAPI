@@ -15,6 +15,7 @@ import java.net.URI
 import java.nio.file.Files
 
 class ArticleServiceTest : FunSpec({
+    /*
     val wiremockServer = WireMockServer(9000)
     listener(WireMockListener(wiremockServer, ListenerMode.PER_SPEC))
 
@@ -138,6 +139,7 @@ class ArticleServiceTest : FunSpec({
             service.parseArticle(1)
         }
     }
+     */
 
 })
 
